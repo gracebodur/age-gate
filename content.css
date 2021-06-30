@@ -12,3 +12,59 @@
   height: 90vh;
   background-color: var(--darkgray);
 }
+
+.main-content {
+  justify-self: start;
+  margin-left: 20px;
+  color: var(--white);
+  width: 80%;
+}
+
+.main-content h1 {
+  font-size: 2rem;
+}
+
+.main-content p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.main-btn {
+  font-size: 1rem;
+  background-color: var(--brightred);
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 2rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s;
+  outline: navajowhite;
+}
+
+.main-btn a {
+  position: relative;
+  z-index: 2;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.main-btn:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: all .35s;
+  border-radius: 4px;
+  background: var(--lightblue);
+}
+
+.main-btn:hover {
+    color: var(--white);
+}
+
+.main-btn:hover:after {
+    width: 100%;
+}
