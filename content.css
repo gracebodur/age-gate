@@ -69,6 +69,11 @@
   width: 100%;
 }
 
+#main-img {
+    height: 80%;
+    width: 80%;
+}
+
 /********** MOBILE RESPONSIVE **********/
 @media screen and (max-width: 768px) {
   .main-container {
