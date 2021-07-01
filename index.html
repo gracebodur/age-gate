@@ -64,34 +64,37 @@
     <div class="modal" id="agegate-modal">
       <div class="modal-content">
         <div class="modal-content-left">
-          <img src="assets/img2.svg" alt="Having fun drinking" />
+          <img id="modal-img" src="assets/img2.svg" alt="Having fun drinking" />
         </div>
         <div class="modal-content-right">
           <form action="/" class="modal-form" id="form">
             <h1>
-              Thank you for visiting Bearwery! You must be of legal drinking age
-              to enter this site. Please enter your birthdate.
+              Thank you for visiting Bearwery! <br />You must be of legal
+              drinking age to enter this site. Please enter your birthdate.
             </h1>
             <div class="form-validation">
-              <label for="month">Month:</label>
+              <label for="month">Month</label>
               <input
-                type="text"
+                type="number"
+                min="1"
+                max="12"
                 class="modal-input"
                 id="month"
                 name="month"
-                placeholder="MM"
                 required
+                autofocus
               />
               <p>Error Message</p>
             </div>
             <div class="form-validation">
               <label for="day">Day</label>
               <input
-                type="text"
+                type="number"
+                min="1"
+                max="31"
                 class="modal-input"
                 id="day"
                 name="day"
-                placeholder="DD"
                 required
               />
               <p>Error Message</p>
@@ -99,11 +102,11 @@
             <div class="form-validation">
               <label for="year">Year</label>
               <input
-                type="text"
+                type="number"
+                min="1900"
                 class="modal-input"
                 id="year"
                 name="year"
-                placeholder="YYYY"
                 required
               />
               <p>Error Message</p>
