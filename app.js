@@ -10,5 +10,5 @@ menu.addEventListener("click", () => {
 window.addEventListener("load", (e) => {
   setTimeout(function () {
     modal.style.display = "block";
-  }, 2000);
+  }, 0000);
 });
