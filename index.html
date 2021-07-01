@@ -69,7 +69,8 @@
         <div class="modal-content-right">
           <form action="/" class="modal-form" id="form">
             <h1>
-              Thank you for visiting Bearwery! <br /> Please enter your birthdate.
+              Thank you for visiting Bearwery! <br />
+              Please enter your birthdate.
             </h1>
             <div class="form-validation">
               <label for="month">Month</label>
@@ -100,7 +101,6 @@
               <label for="year">Year</label>
               <input
                 type="number"
-                min="1900"
                 class="modal-input"
                 id="year"
                 name="year"
@@ -114,14 +114,21 @@
                 id="rememberMe"
               /><label for="rememberMe"> Remember me</label>
             </div>
-            <input type="submit" class="modal-input-btn" value="Verify Age" />
-            <span class="modal-input-message" id='message'>You must be of legal
-              drinking age to enter this site.</span>
+            <input
+              type="submit"
+              class="modal-input-btn"
+              value="Verify Age"
+              id="verify"
+            />
+            <span class="modal-input-message" id="message"
+              >You must be of legal drinking age to enter this site.</span
+            >
           </form>
         </div>
       </div>
     </div>
     <!-- End of Modal -->
+
     <script src="app.js"></script>
   </body>
 </html>

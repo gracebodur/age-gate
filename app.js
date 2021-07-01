@@ -1,14 +1,22 @@
-const menu = document.querySelector("#mobile-menu");
-const menuLinks = document.querySelector(".nav-menu");
-const modal = document.getElementById("agegate-modal");
+class App {
+  constructor() {
+    this.$menu = document.querySelector("#mobile-menu");
+    this.$menuLinks = document.querySelector(".nav-menu");
+    this.$modal = document.getElementById("agegate-modal");
 
-menu.addEventListener("click", () => {
-  menu.classList.toggle("is-active");
-  menuLinks.classList.toggle("active");
-});
+    this.addEventListeners();
+  }
 
-window.addEventListener("load", (e) => {
-  setTimeout(function () {
-    modal.style.display = "block";
-  }, 0000);
-});
+  addEventListeners() {
+    window.addEventListener("load", () => {
+        this.$modal.style.display = "block";
+    });
+
+    this.$menu.addEventListener("click", () => {
+      this.$menu.classList.toggle("is-active");
+      this.$menuLinks.classList.toggle("active");
+    });
+  }
+}
+
+new App();
