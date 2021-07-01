@@ -15,6 +15,11 @@
   display: none;
 }
 
+.form-validation {
+  margin-bottom: 0.5rem;
+  width: 80%;
+}
+
 .modal-content {
   background: var(--whitesmoke);
   margin: 10% auto;
@@ -72,17 +77,37 @@
 }
 
 .modal-input {
-    display: block;
-    padding-left: 0.5rem;
-    outline: none;
-    border-radius: 2px;
-    border: none;
-    height: 2rem;
-    width: 30%;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  display: block;
+  padding-left: 0.5rem;
+  outline: none;
+  border-radius: 2px;
+  border: none;
+  height: 2rem;
+  width: 100%;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-.form-validation {
-    margin-bottom: 0.5rem;
-    width: 80%;
+.modal-input-btn {
+  width: 80%;
+  height: 2rem;
+  border-radius: 2px;
+  background-color: var(--brightred);
+  outline: none;
+  border: none;
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.modal-input-btn:hover {
+  cursor: pointer;
+  background-color: var(--lightblue);
+  transition: all 0.4s ease-out;
+}
+
+.modal-input-message {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: var(--darkgray);
+  width: 80%;
+  text-align: center;
 }
