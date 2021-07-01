@@ -54,11 +54,64 @@
           <button class="main-btn"><a href="#">Discover More</a></button>
         </div>
         <div class="main-img-container">
-          <img src="assets/img1.svg" alt="" id="main-img" />
+          <img src="assets/img1.svg" alt="Beer celebration" id="main-img" />
         </div>
       </div>
     </div>
     <!-- End of Main Content -->
+
+    <!-- Modal -->
+    <div class="modal" id="email-modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="modal-content-left">
+          <img src="assets/img2.svg" alt="Having fun drinking" />
+        </div>
+        <div class="modal-content-right">
+          <form action="/" class="modal-form" id="form">
+            <h1>
+              Thank you for visiting Bearwery! You must be of legal drinking age
+              to enter this site.
+            </h1>
+            <div class="form-validation">
+              <input
+                type="text"
+                class="modal-input"
+                id="month"
+                name="month"
+                placeholder="Month"
+                required
+              />
+              <p>Error Message</p>
+            </div>
+            <div class="form-validation">
+              <input
+                type="text"
+                class="modal-input"
+                id="day"
+                name="day"
+                placeholder="Day"
+                required
+              />
+              <p>Error Message</p>
+            </div>
+            <div class="form-validation">
+              <input
+                type="text"
+                class="modal-input"
+                id="year"
+                name="year"
+                placeholder="Year"
+                required
+              />
+              <p>Error Message</p>
+            </div>
+            <input type="submit" class="modal-input-btn" value='Verify Age'>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End of Modal -->
     <script src="app.js"></script>
   </body>
 </html>
