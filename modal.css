@@ -5,7 +5,7 @@
 
 .modal {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   left: 0;
   top: 0;
   width: 100%;
@@ -110,4 +110,26 @@
   color: var(--darkgray);
   width: 80%;
   text-align: center;
+}
+
+/********** MOBILE RESPONSIVE **********/
+@media screen and (max-width: 768px) {
+    .modal-content-left {
+        display: none ;
+    }
+
+    .modal-content {
+        grid-template-columns: auto;
+        margin: 15%;
+        width: 70%;
+        height: 75%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .modal-content {
+        margin: 20% auto;
+        width: 90%;
+        height: 80%;
+    }
 }

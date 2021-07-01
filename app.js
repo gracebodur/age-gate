@@ -8,7 +8,6 @@ menu.addEventListener("click", () => {
 });
 
 window.addEventListener("load", (e) => {
-  console.log("The page has fully loaded");
   setTimeout(function () {
     modal.style.display = "block";
   }, 2000);
