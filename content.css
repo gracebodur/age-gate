@@ -70,8 +70,8 @@
 }
 
 #main-img {
-    height: 80%;
-    width: 80%;
+  height: 80%;
+  width: 80%;
 }
 
 /********** MOBILE RESPONSIVE **********/
@@ -118,12 +118,12 @@
   }
 
   .main-content p {
-      margin-top: 2rem;
-      font-size: 1.5rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
   }
 
   .main-btn {
-      padding: 12px 36px;
-      margin-top: 2.5rem;
+    padding: 12px 36px;
+    margin-top: 2.5rem;
   }
 }
