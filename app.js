@@ -48,22 +48,28 @@ const isRequiredAge = (month = "MM", day = "DD", year = "YYYY") =>
   new Date(year + requiredAge, month - 1, day) <= new Date();
 
 function removeModal() {
-  const myModal = setTimeout(() => {
+  const hideModal = setTimeout(() => {
     modal.style.display = "none";
   }, 5000);
-  clearTimeout(myModal);
+  clearTimeout(hideModal);
+}
+
+function showModal() {
+  modal.style.display = "block";
 }
 
 function showHeader() {
-  setTimeout(() => {
+  const displayHeader = setTimeout(() => {
     header.style.display = "block";
   }, 4000);
+  clearTimeout(displayHeader);
 }
 
-function changeModalImg() {
-  setTimeout(() => {
+function openModalImg() {
+  const openSign = setTimeout(() => {
     modalImg.src = "assets/open-sign.jpg";
   }, 3000);
+  clearTimeout(openSign);
 }
 
 function ageVerification() {
@@ -81,16 +87,18 @@ function ageVerification() {
 
   if (userAge < requiredAge) {
     message.innerHTML = `Sorry, please come back when you're ${requiredAge}`;
-    message.style.color = '#f9423d'
-    message.style.fontWeight = '800'
-    message.style.fontSize = '1.5rem'
+    message.style.color = "#f9423d";
+    message.style.fontWeight = "800";
+    message.style.fontSize = "1.5rem";
+    modalImg.src = "assets/closed-sign.jpg";
     showModal();
+    // closeModalImg();
   } else if (userAge >= requiredAge) {
     message.innerHTML = "Enjoy your visit!";
-    message.style.fontWeight = '800'
-    message.style.fontSize = '1.5rem'
-    message.style.color = '#337af1'
-    changeModalImg();
+    message.style.fontWeight = "800";
+    message.style.fontSize = "1.5rem";
+    message.style.color = "#337af1";
+    openModalImg();
     removeModal();
     showHeader();
   } else if (monthValue == thisMonth && dayValue == thisDay) {
