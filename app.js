@@ -27,9 +27,9 @@ window.addEventListener("load", () => {
   header.style.display = "none";
 });
 
-bannerBtn.addEventListener('click', () => {
-  showModal()
-})
+bannerBtn.addEventListener("click", () => {
+  showModal();
+});
 
 menu.addEventListener("click", () => {
   menu.classList.toggle("is-active");
@@ -45,6 +45,7 @@ enter.addEventListener("submit", (e) => {
   e.preventDefault();
   ageVerification();
 });
+
 
 month.addEventListener("keyup", ageVerification);
 day.addEventListener("keyup", ageVerification);
@@ -69,7 +70,6 @@ function showHeader() {
   }, 5500);
 }
 
-
 function ageVerification() {
   let monthValue = parseFloat(month.value);
   let dayValue = parseFloat(day.value);
@@ -92,15 +92,19 @@ function ageVerification() {
     navbar.style.display = "none";
     header.style.display = "none";
     showModal();
-  } else if (userAge >= requiredAge) {
+  } else if (userAge > requiredAge) {
     message.innerHTML = "Enjoy your visit!";
     message.style.fontWeight = "800";
     message.style.fontSize = "1.5rem";
     message.style.color = "#337af1";
     removeModal();
     showHeader();
-  } else if (monthValue == thisMonth && dayValue == thisDay) {
+  } else if (userAge === requiredAge) {
     message.innerHTML = "Happy Birthday!";
+    message.style.fontWeight = "800";
+    message.style.fontSize = "1.5rem";
+    message.style.color = "#026920";
+    modalImg.src = "assets/bday.jpg";
   } else {
     message.innerHTML = "You must be of legal drinking age to enter this site.";
     successChecker(query);
