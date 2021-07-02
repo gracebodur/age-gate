@@ -8,7 +8,9 @@ const year = document.getElementById("year");
 const enter = document.getElementById("enter");
 const message = document.getElementById("message");
 const header = document.getElementById("hide");
+const navbar = document.getElementById("nav-wrapper");
 const modalImg = document.getElementById("modal-img");
+const bannerBtn = document.getElementById("banner-btn");
 const todaysDate = new Date();
 const thisYear = todaysDate.getFullYear();
 const thisMonth = todaysDate.getMonth();
@@ -24,6 +26,10 @@ window.addEventListener("load", () => {
   }, 0000);
   header.style.display = "none";
 });
+
+bannerBtn.addEventListener('click', () => {
+  showModal()
+})
 
 menu.addEventListener("click", () => {
   menu.classList.toggle("is-active");
@@ -48,10 +54,9 @@ const isRequiredAge = (month = "MM", day = "DD", year = "YYYY") =>
   new Date(year + requiredAge, month - 1, day) <= new Date();
 
 function removeModal() {
-  const hideModal = setTimeout(() => {
+  setTimeout(() => {
     modal.style.display = "none";
   }, 5000);
-  clearTimeout(hideModal);
 }
 
 function showModal() {
@@ -61,16 +66,9 @@ function showModal() {
 function showHeader() {
   const displayHeader = setTimeout(() => {
     header.style.display = "block";
-  }, 4000);
-  clearTimeout(displayHeader);
+  }, 5500);
 }
 
-function openModalImg() {
-  const openSign = setTimeout(() => {
-    modalImg.src = "assets/open-sign.jpg";
-  }, 3000);
-  clearTimeout(openSign);
-}
 
 function ageVerification() {
   let monthValue = parseFloat(month.value);
@@ -86,19 +84,19 @@ function ageVerification() {
   userAge ? console.log(`You are ${userAge} years old`) : "";
 
   if (userAge < requiredAge) {
-    message.innerHTML = `Sorry, please come back when you're ${requiredAge}`;
+    message.textContent = `Sorry, please come back when you're ${requiredAge}`;
     message.style.color = "#f9423d";
     message.style.fontWeight = "800";
     message.style.fontSize = "1.5rem";
     modalImg.src = "assets/closed-sign.jpg";
+    navbar.style.display = "none";
+    header.style.display = "none";
     showModal();
-    // closeModalImg();
   } else if (userAge >= requiredAge) {
     message.innerHTML = "Enjoy your visit!";
     message.style.fontWeight = "800";
     message.style.fontSize = "1.5rem";
     message.style.color = "#337af1";
-    openModalImg();
     removeModal();
     showHeader();
   } else if (monthValue == thisMonth && dayValue == thisDay) {
