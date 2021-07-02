@@ -67,10 +67,10 @@
           <img id="modal-img" src="assets/img2.svg" alt="Having fun drinking" />
         </div>
         <div class="modal-content-right">
-          <form action="/" class="modal-form" id="form">
+          <form action="/" class="modal-form" id="form" onsubmit="ageVerification()">
             <h1>
-              Thank you for visiting Bearwery! <br />
-              Please enter your birthdate.
+              Thank you for visiting Bearwery!
+              Please enter your date of birth.
             </h1>
             <div class="form-validation">
               <label for="month">Month</label>
@@ -114,12 +114,14 @@
                 id="rememberMe"
               /><label for="rememberMe"> Remember me</label>
             </div>
-            <input
+            <button
               type="submit"
               class="modal-input-btn"
-              value="Verify Age"
-              id="verify"
-            />
+              onclick="ageVerification()"
+              id="enter"
+            >
+              ENTER
+            </button>
             <span class="modal-input-message" id="message"
               >You must be of legal drinking age to enter this site.</span
             >
