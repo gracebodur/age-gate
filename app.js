@@ -60,10 +60,6 @@ function removeModal() {
   }, 5000);
 }
 
-function showModal() {
-  modal.style.display = "block";
-}
-
 function showHeader() {
   const displayHeader = setTimeout(() => {
     header.style.display = "block";
@@ -91,7 +87,7 @@ function ageVerification() {
     modalImg.src = "assets/closed-sign.jpg";
     navbar.style.display = "none";
     header.style.display = "none";
-    showModal();
+    modal.style.display = "block";
   } else if (userAge > requiredAge) {
     message.innerHTML = "Enjoy your visit!";
     message.style.fontWeight = "800";

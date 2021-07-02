@@ -10,8 +10,6 @@ Age gate is a popup campaign shown to visitors to make sure they are old enough 
 
  <img src="./assets/smallscreen.png"  title="Small Screen" alt='App screenshot'>
   
-##### Credits
-
 ###### Images
 
 Image by <a href="https://pixabay.com/users/paulbr75-2938186/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1617495">Paul Brennan</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1617495">Pixabay</a>
