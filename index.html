@@ -4,13 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Age Gate</title>
+    <title>Grace and Bo's Brewery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Josefin+Slab:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap"
+    rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -18,14 +17,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="content.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Nav -->
     <div class="nav-container">
       <nav class="navbar">
-        <h1 id="navbar-logo">BEARWERY</h1>
+        <h1 id="navbar-logo">GBB</h1>
         <div class="menu-toggle" id="mobile-menu">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -42,35 +40,36 @@
     </div>
     <!-- End of Nav -->
 
-    <!-- Main Content -->
-    <div class="main">
-      <div class="main-container">
-        <div class="main-content">
-          <h1>Lorem, ipsum dolor.</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi,
-            temporibus.
-          </p>
-          <button class="main-btn"><a href="#">Discover More</a></button>
-        </div>
-        <div class="main-img-container">
-          <img src="assets/img1.svg" alt="Beer celebration" id="main-img" />
-        </div>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="bg-img-wrapper">
+        <img src="assets/bg.jpg" alt="" />
       </div>
-    </div>
-    <!-- End of Main Content -->
+      <div class="banner" id='hide'>
+        <h1>Grace & Bo's Brewery</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <button><a href='#'>Discover more</a></button>
+      </div>
+    </header>
+    <!-- END OF HEADER -->
 
     <!-- Modal -->
     <div class="modal animated bounceInDown" id="agegate-modal">
       <div class="modal-content">
         <div class="modal-content-left">
-          <img id="modal-img" src="assets/img2.svg" alt="Having fun drinking" />
+          <img id="modal-img" src="assets/beer.jpg" alt="Having fun drinking" />
         </div>
         <div class="modal-content-right">
-          <form action="/" class="modal-form" id="form" onsubmit="ageVerification()">
+          <form
+            action="/"
+            class="modal-form"
+            id="form"
+            onsubmit="ageVerification()"
+          >
             <h1>
-              Thank you for visiting Bearwery!
-              Please enter your date of birth.
+              Thank you for visiting Bearwery! Please enter your date of birth.
             </h1>
             <div class="form-validation">
               <label for="month">Month</label>
