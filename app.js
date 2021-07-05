@@ -11,10 +11,12 @@ const header = document.getElementById("hide");
 const navbar = document.getElementById("nav-wrapper");
 const modalImg = document.getElementById("modal-img");
 const bannerBtn = document.getElementById("banner-btn");
+const errorTitle = document.getElementById('message-title')
+const errorSubtitle = document.getElementById('message-subtitle')
 const todaysDate = new Date();
 const thisYear = todaysDate.getFullYear();
-const thisMonth = todaysDate.getMonth();
-const thisDay = todaysDate.getDay();
+const thisMonth = todaysDate.getMonth() + 1;
+const thisDay = todaysDate.getDay() + 4;
 const requiredAge = 21;
 
 let verified;
@@ -25,10 +27,7 @@ window.addEventListener("load", () => {
     modal.style.display = "block";
   }, 0000);
   header.style.display = "none";
-});
-
-bannerBtn.addEventListener("click", () => {
-  showModal();
+  console.log(thisMonth, thisDay, thisYear)
 });
 
 menu.addEventListener("click", () => {
@@ -38,14 +37,15 @@ menu.addEventListener("click", () => {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+
   ageVerification();
 });
 
 enter.addEventListener("submit", (e) => {
   e.preventDefault();
+
   ageVerification();
 });
-
 
 month.addEventListener("keyup", ageVerification);
 day.addEventListener("keyup", ageVerification);
@@ -54,22 +54,10 @@ year.addEventListener("keyup", ageVerification);
 const isRequiredAge = (month = "MM", day = "DD", year = "YYYY") =>
   new Date(year + requiredAge, month - 1, day) <= new Date();
 
-function removeModal() {
-  setTimeout(() => {
-    modal.style.display = "none";
-  }, 5000);
-}
-
-function showHeader() {
-  const displayHeader = setTimeout(() => {
-    header.style.display = "block";
-  }, 5500);
-}
-
 function ageVerification() {
-  let monthValue = parseFloat(month.value);
-  let dayValue = parseFloat(day.value);
-  let yearValue = parseFloat(year.value);
+  let monthValue = parseInt(month.value);
+  let dayValue = parseInt(day.value);
+  let yearValue = parseInt(year.value);
   let userAge = Math.abs(yearValue - thisYear);
   let query = isRequiredAge(monthValue, dayValue, yearValue);
 
@@ -79,23 +67,21 @@ function ageVerification() {
   yearValue ? console.log(`Year typed ${yearValue}`) : "";
   userAge ? console.log(`You are ${userAge} years old`) : "";
 
-  if (userAge < requiredAge) {
-    message.textContent = `Sorry, please come back when you're ${requiredAge}`;
-    message.style.color = "#f9423d";
-    message.style.fontWeight = "800";
-    message.style.fontSize = "1.5rem";
-    modalImg.src = "assets/closed-sign.jpg";
+
+  if (userAge < requiredAge && yearValue >= thisYear) {
+    modal.style.display = "none";
+    errorTitle.innerHTML = 'Sorry, '
+    errorSubtitle.innerHTML = `you must be ${requiredAge} or older to view this site.`
+    bannerBtn.style.display = 'none'
     navbar.style.display = "none";
-    header.style.display = "none";
-    modal.style.display = "block";
   } else if (userAge > requiredAge) {
-    message.innerHTML = "Enjoy your visit!";
-    message.style.fontWeight = "800";
-    message.style.fontSize = "1.5rem";
-    message.style.color = "#337af1";
-    removeModal();
-    showHeader();
-  } else if (userAge === requiredAge) {
+    setTimeout(() => {
+      modal.style.display = "none";
+    }, 2000)
+    setTimeout(() => {
+      header.style.display = 'initial'
+    }, 2500)
+  } else if (monthValue == thisMonth && dayValue == thisDay) {
     message.innerHTML = "Happy Birthday!";
     message.style.fontWeight = "800";
     message.style.fontSize = "1.5rem";
@@ -106,6 +92,7 @@ function ageVerification() {
     successChecker(query);
   }
 }
+
 
 function successChecker(e) {
   if (e) {
