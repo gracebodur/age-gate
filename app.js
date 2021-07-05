@@ -1,3 +1,4 @@
+//------------GLOBAL VARIABLES----------------------
 const menu = document.querySelector("#mobile-menu");
 const menuLinks = document.querySelector(".nav-menu");
 const modal = document.getElementById("agegate-modal");
@@ -11,8 +12,9 @@ const header = document.getElementById("hide");
 const navbar = document.getElementById("nav-wrapper");
 const modalImg = document.getElementById("modal-img");
 const bannerBtn = document.getElementById("banner-btn");
-const errorTitle = document.getElementById('message-title')
-const errorSubtitle = document.getElementById('message-subtitle')
+const errorTitle = document.getElementById("message-title");
+const errorSubtitle = document.getElementById("message-subtitle");
+
 const todaysDate = new Date();
 const thisYear = todaysDate.getFullYear();
 const thisMonth = todaysDate.getMonth() + 1;
@@ -21,13 +23,15 @@ const requiredAge = 21;
 
 let verified;
 
+//------------END OF GLOBAL VARIABLES--------------------
+
 // -------------EVENT LISTENERS---------------------------
 window.addEventListener("load", () => {
   setTimeout(function () {
     modal.style.display = "block";
   }, 0000);
   header.style.display = "none";
-  console.log(thisMonth, thisDay, thisYear)
+  console.log(thisMonth, thisDay, thisYear);
 });
 
 menu.addEventListener("click", () => {
@@ -51,9 +55,12 @@ month.addEventListener("keyup", ageVerification);
 day.addEventListener("keyup", ageVerification);
 year.addEventListener("keyup", ageVerification);
 
+// -------------END OF EVENT LISTENERS---------------------------
+
 const isRequiredAge = (month = "MM", day = "DD", year = "YYYY") =>
   new Date(year + requiredAge, month - 1, day) <= new Date();
 
+// -------------AGE VALIDATION---------------------------
 function ageVerification() {
   let monthValue = parseInt(month.value);
   let dayValue = parseInt(day.value);
@@ -67,20 +74,19 @@ function ageVerification() {
   yearValue ? console.log(`Year typed ${yearValue}`) : "";
   userAge ? console.log(`You are ${userAge} years old`) : "";
 
-
   if (userAge < requiredAge && yearValue >= thisYear) {
     modal.style.display = "none";
-    errorTitle.innerHTML = 'Sorry, '
-    errorSubtitle.innerHTML = `you must be ${requiredAge} or older to view this site.`
-    bannerBtn.style.display = 'none'
+    errorTitle.innerHTML = "Sorry, ";
+    errorSubtitle.innerHTML = `you must be ${requiredAge} or older to view this site.`;
+    bannerBtn.style.display = "none";
     navbar.style.display = "none";
   } else if (userAge > requiredAge) {
     setTimeout(() => {
       modal.style.display = "none";
-    }, 2000)
+    }, 2000);
     setTimeout(() => {
-      header.style.display = 'initial'
-    }, 2500)
+      header.style.display = "initial";
+    }, 2500);
   } else if (monthValue == thisMonth && dayValue == thisDay) {
     message.innerHTML = "Happy Birthday!";
     message.style.fontWeight = "800";
@@ -90,8 +96,49 @@ function ageVerification() {
   } else {
     message.innerHTML = "You must be of legal drinking age to enter this site.";
     successChecker(query);
+    checkRequired([month, day, year]);
   }
 }
+
+// -------------SHOW ERROR---------------------------
+function showError(input, messages) {
+  const formValidation = input.parentElement;
+  formValidation.className = "form-validation error";
+
+  const errorMessage = formValidation.querySelector("p");
+  errorMessage.innerHTML = messages;
+}
+
+// -------------SHOW VALID---------------------------
+function showValid(input) {
+  const formValidation = input.parentElement;
+  formValidation.className = "form-validation valid";
+}
+
+function getFieldName(input) {
+  return input.name.charAt(0).toUpperCase() + input.name.slice(1)
+}
+
+// -------------CHECK REQUIRED FIELDS-----------------------
+function checkRequired(inputArr) {
+  inputArr.forEach(function (input) {
+    if(input.value.trim() === '') {
+      showError(input, `${getFieldName(input)} is required`)
+    } else {
+      showValid(input)
+    }
+  });
+}
+
+// function checkInputLength(input, min, max) {
+//   if(input.value.length < min) {
+//     showError(input, `${getFieldName} must be atleaste ${min} characters`)
+//   } else if (input.value.length > max) {
+//     showError(input, `${getFieldName} must be less than ${max} characters`)
+//   } else {
+//     showValid(input)
+//   }
+// }
 
 
 function successChecker(e) {
@@ -104,7 +151,7 @@ function successChecker(e) {
   }
 }
 
-/* CHECKS FOR REMEMBER ME SELECTION */
+// -------------CHECKS FOR REMEMBER ME SELECTION-------------
 function rememberMeCheck() {
   let wantsACookie = document.getElementById("rememberMe").checked;
   if (wantsACookie && verified) {
@@ -114,7 +161,7 @@ function rememberMeCheck() {
   }
 }
 
-/* CHECKS FOR COOKIES ON SITE LOAD */
+// -------------CHECKS FOR COOKIES ON SITE LOAD-------------
 function cookieCheck() {
   if (document.cookie === "verified") {
     successChecker(true);
