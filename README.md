@@ -17,7 +17,16 @@ Image by <a href="https://pixabay.com/users/paulbr75-2938186/?utm_source=link-at
 Photo by <a href="https://unsplash.com/@timmossholder?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tim Mossholder</a> on <a href="https://unsplash.com/s/photos/closed-sign?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 Photo by <a href="https://unsplash.com/@merittthomas?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Meritt Thomas</a> on <a href="https://unsplash.com/s/photos/brewery?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+Photo by <a href="https://unsplash.com/@fourcolourblack?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Adam Wilson</a> on <a href="https://unsplash.com/s/photos/brewing?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+Photo by <a href="https://unsplash.com/@merittthomas?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Meritt Thomas</a> on <a href="https://unsplash.com/s/photos/brewing-beer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+Photo by <a href="https://unsplash.com/@louishansel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Louis Hansel</a> on <a href="https://unsplash.com/s/photos/brewing-beer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+Photo by <a href="https://unsplash.com/@timothyhalesbennett?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Timothy Hales Bennett</a> on <a href="https://unsplash.com/s/photos/brewing-beer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
+Photo by <a href="https://unsplash.com/@zn35pjqq?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jon Parry</a> on <a href="https://unsplash.com/s/photos/brewing-beer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 ##### Technologies used
 

@@ -14,22 +14,13 @@ const modalImg = document.getElementById("modal-img");
 const bannerBtn = document.getElementById("banner-btn");
 const errorTitle = document.getElementById("message-title");
 const errorSubtitle = document.getElementById("message-subtitle");
+const gallery = document.getElementById("gallery-section");
 
 const todaysDate = new Date();
 const thisYear = todaysDate.getFullYear();
 const thisMonth = todaysDate.getMonth() + 1;
 const thisDay = todaysDate.getDay() + 4;
 const requiredAge = 21;
-
-const slideshow = document.getElementById("pub");
-const items = document.querySelectorAll(".item");
-const controls = document.querySelectorAll(".control");
-const headerItems = document.querySelectorAll(".item-header");
-const descriptionItems = document.querySelectorAll(".item-description");
-const activeDelay = 0.76;
-const interval = 5000;
-
-let current = 0;
 
 let verified;
 
@@ -41,7 +32,7 @@ window.addEventListener("load", () => {
     modal.style.display = "block";
   }, 0000);
   header.style.display = "none";
-  slideshow.style.display = "none";
+  gallery.style.display = "none";
   console.log(thisMonth, thisDay, thisYear);
 });
 
@@ -97,7 +88,7 @@ function ageVerification() {
     errorSubtitle.innerHTML = `you must be ${requiredAge} or older to view this site.`;
     bannerBtn.style.display = "none";
     navbar.style.display = "none";
-    slideshow.style.display = 'none'
+    gallery.style.display = 'none'
   } else if (userAge >= requiredAge) {
     setTimeout(() => {
       modal.style.display = "none";
@@ -105,7 +96,7 @@ function ageVerification() {
     setTimeout(() => {
       header.style.display = "initial";
     }, 2500);
-    slideshow.style.display = 'initial'
+    gallery.style.display = 'grid'
   } else if (monthValue == thisMonth && dayValue == thisDay) {
     message.innerHTML = "Happy Birthday!";
     message.style.fontWeight = "800";
@@ -191,81 +182,5 @@ function cookieCheck() {
     console.log("no cookies found");
   }
 }
-
-// -------------SLIDESHOW-------------
-const slider = {
-  init: () => {
-    controls.forEach((control) =>
-      control.addEventListener("click", (e) => {
-        slider.clickedControl(e);
-      })
-    );
-    controls[current].classList.add("active");
-    items[current].classList.add("active");
-  },
-  nextSlide: () => {
-    // Increment current slide and add active class
-    slider.reset();
-    if (current === items.length - 1) current = -1; // Check if current slide is last in array
-    current++;
-    controls[current].classList.add("active");
-    items[current].classList.add("active");
-    slider.transitionDelay(headerItems);
-    slider.transitionDelay(descriptionItems);
-  },
-  clickedControl: (e) => {
-    // Add active class to clicked control and corresponding slide
-    slider.reset();
-    clearInterval(intervalF);
-
-    const control = e.target,
-      dataIndex = Number(control.dataset.index);
-
-    control.classList.add("active");
-    items.forEach((item, index) => {
-      if (index === dataIndex) {
-        // Add active class to corresponding slide
-        item.classList.add("active");
-      }
-    });
-    current = dataIndex; // Update current slide
-    slider.transitionDelay(headerItems);
-    slider.transitionDelay(descriptionItems);
-    intervalF = setInterval(slider.nextSlide, interval); // Fire that bad boi back up
-  },
-  reset: () => {
-    // Remove active classes
-    items.forEach((item) => item.classList.remove("active"));
-    controls.forEach((control) => control.classList.remove("active"));
-  },
-  transitionDelay: (items) => {
-    // Set incrementing css transition-delay for .item-header & .item-description, .vertical-part, b elements
-    let seconds;
-
-    items.forEach((item) => {
-      const children = item.childNodes; // .vertical-part(s)
-      let count = 1,
-        delay;
-
-      item.classList.value === "item-header"
-        ? (seconds = 0.015)
-        : (seconds = 0.007);
-
-      children.forEach((child) => {
-        // iterate through .vertical-part(s) and style b element
-        if (child.classList) {
-          item.parentNode.classList.contains("active")
-            ? (delay = count * seconds + activeDelay)
-            : (delay = count * seconds);
-          child.firstElementChild.style.transitionDelay = `${delay}s`; // b element
-          count++;
-        }
-      });
-    });
-  },
-};
-
-let intervalF = setInterval(slider.nextSlide, interval);
-slider.init();
 
 document.onload = cookieCheck();
