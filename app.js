@@ -50,6 +50,9 @@ enter.addEventListener("submit", (e) => {
   e.preventDefault();
 
   ageVerification();
+  checkInputLength(month, 2, 12)
+  checkInputLength(day, 2, 31)
+  checkInputLength(year, 4, 2025)
 });
 
 month.addEventListener("keyup", ageVerification);
@@ -131,15 +134,16 @@ function checkRequired(inputArr) {
   });
 }
 
-// function checkInputLength(input, min, max) {
-//   if(input.value.length < min) {
-//     showError(input, `${getFieldName} must be atleaste ${min} characters`)
-//   } else if (input.value.length > max) {
-//     showError(input, `${getFieldName} must be less than ${max} characters`)
-//   } else {
-//     showValid(input)
-//   }
-// }
+function checkInputLength(input, min, max) {
+  if(input.value.length < min) {
+    showError(input, `${getFieldName} must be at least ${min} characters`)
+  } else if (input.value.length > max) {
+    showError(input, `${getFieldName} must be less than ${max} characters`)
+  } else {
+    showValid(input)
+  }
+}
+
 
 function successChecker(e) {
   if (e) {
