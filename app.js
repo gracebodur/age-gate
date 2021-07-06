@@ -134,6 +134,7 @@ function checkRequired(inputArr) {
   });
 }
 
+// -------------CHECK INPUT LENGTH-----------------------
 function checkInputLength(input, min, max) {
   if(input.value.length < min) {
     showError(input, `${getFieldName} must be at least ${min} characters`)
@@ -145,6 +146,7 @@ function checkInputLength(input, min, max) {
 }
 
 
+// -------------ADD ABOOLENA VALUE TO VERIFIED-----------------------
 function successChecker(e) {
   if (e) {
     verified = true;

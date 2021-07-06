@@ -205,8 +205,24 @@ NAV STYLES
 }
 
 /*/* ------------------------------------------------------------------------------
-	MOBILE RESPONSIVE
+	LAPTOP & MOBILE RESPONSIVE
 -------------------------------------------------------------------------------*/
+@media (max-width: 1536px) {
+  .banner h1 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+
+  .banner p {
+    font-size: 1.5rem;
+  }
+
+  .banner button {
+    width: 20rem;
+    height: 4rem;
+    font-size: 1rem;
+  }
+}
 
 @media (max-width: 1400px) {
   .banner h1 {
