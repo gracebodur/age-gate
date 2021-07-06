@@ -1,23 +1,23 @@
 @import url("modal.css");
+@import url("slideshow.css");
 
 :root {
   --darkgray: #212329;
   --brightred: #f9423d;
   --lightred: #f9433dcc;
   --lightblue: #337af1;
-  --darkgray: #1E201F;
+  --darkgray: #1e201f;
   --white: #fff;
   --whitesmoke: #f4f4f4;
   --gold: #c29525;
 }
- 
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Nunito", sans-serif;
 }
-
 
 /*/* ------------------------------------------------------------------------------
 	HEADER STYLES
@@ -139,7 +139,6 @@ BANNER STYLES
   }
 }
 
-
 /*/* ------------------------------------------------------------------------------
 NAV STYLES
 -------------------------------------------------------------------------------*/
@@ -257,7 +256,6 @@ NAV STYLES
     font-size: 1.5rem;
   }
 }
-
 
 @media (max-width: 700px) {
   .banner h1 {

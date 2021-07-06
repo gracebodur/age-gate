@@ -10,6 +10,7 @@
   top: 0;
   width: 100%;
   height: 100%;
+  display: none !important;
 }
 
 /********** MODAL ANIMATION **********/
@@ -57,25 +58,6 @@
 .bounceInDown {
   -webkit-animation-name: bounceInDown;
   animation-name: bounceInDown;
-}
-
-.form-validation {
-  margin-bottom: 0.5rem;
-  width: 80%;
-}
-
-.form-validation.error {
-  margin-bottom: 1.5rem;
-  position: relative;
-  border: 1px solid var(--errorColor);
-  border-radius: 2px;
-}
-
-.form-validation.valid {
-  margin-bottom: 0.5rem;
-  position: relative;
-  border: 1px solid var(--validColor);
-  border-radius: 2px;
 }
 
 .modal-content {
@@ -160,11 +142,6 @@
 .form-validation.error p {
   display: block;
 }
-
-.remove {
-  display: none;
-}
-
 
 .modal-input {
   display: block;
