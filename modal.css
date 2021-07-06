@@ -161,6 +161,11 @@
   display: block;
 }
 
+.remove {
+  display: none;
+}
+
+
 .modal-input {
   display: block;
   padding-left: 0.5rem;

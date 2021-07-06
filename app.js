@@ -20,6 +20,7 @@ const thisYear = todaysDate.getFullYear();
 const thisMonth = todaysDate.getMonth() + 1;
 const thisDay = todaysDate.getDay() + 4;
 const requiredAge = 21;
+const requiredYearOfBirth = 2000;
 
 let verified;
 
@@ -80,9 +81,9 @@ function ageVerification() {
     errorSubtitle.innerHTML = `you must be ${requiredAge} or older to view this site.`;
     bannerBtn.style.display = "none";
     navbar.style.display = "none";
-  } else if (userAge > requiredAge) {
+  } else if (userAge >= requiredAge) {
     setTimeout(() => {
-      modal.style.display = "none";
+    modal.style.display = "none";
     }, 2000);
     setTimeout(() => {
       header.style.display = "initial";
@@ -116,16 +117,16 @@ function showValid(input) {
 }
 
 function getFieldName(input) {
-  return input.name.charAt(0).toUpperCase() + input.name.slice(1)
+  return input.name.charAt(0).toUpperCase() + input.name.slice(1);
 }
 
 // -------------CHECK REQUIRED FIELDS-----------------------
 function checkRequired(inputArr) {
   inputArr.forEach(function (input) {
-    if(input.value.trim() === '') {
-      showError(input, `${getFieldName(input)} is required`)
+    if (input.value.trim() === "") {
+      showError(input, `${getFieldName(input)} is required`);
     } else {
-      showValid(input)
+      showValid(input);
     }
   });
 }
@@ -139,7 +140,6 @@ function checkRequired(inputArr) {
 //     showValid(input)
 //   }
 // }
-
 
 function successChecker(e) {
   if (e) {
