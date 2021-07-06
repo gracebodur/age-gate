@@ -44,6 +44,9 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   ageVerification();
+  checkInputLength(month, 2, 12)
+  checkInputLength(day, 2, 31)
+  checkInputLength(year, 4, 2025)
 });
 
 enter.addEventListener("submit", (e) => {
@@ -84,7 +87,7 @@ function ageVerification() {
     errorSubtitle.innerHTML = `you must be ${requiredAge} or older to view this site.`;
     bannerBtn.style.display = "none";
     navbar.style.display = "none";
-  } else if (userAge >= requiredAge) {
+  } else if (userAge >= requiredAge){
     setTimeout(() => {
     modal.style.display = "none";
     }, 2000);
