@@ -21,6 +21,7 @@ const thisMonth = todaysDate.getMonth() + 1;
 const thisDay = todaysDate.getDay() + 4;
 const requiredAge = 21;
 
+const slideshow = document.getElementById("pub");
 const items = document.querySelectorAll(".item");
 const controls = document.querySelectorAll(".control");
 const headerItems = document.querySelectorAll(".item-header");
@@ -40,6 +41,7 @@ window.addEventListener("load", () => {
     modal.style.display = "block";
   }, 0000);
   header.style.display = "none";
+  slideshow.style.display = "none";
   console.log(thisMonth, thisDay, thisYear);
 });
 
@@ -95,6 +97,7 @@ function ageVerification() {
     errorSubtitle.innerHTML = `you must be ${requiredAge} or older to view this site.`;
     bannerBtn.style.display = "none";
     navbar.style.display = "none";
+    slideshow.style.display = 'none'
   } else if (userAge >= requiredAge) {
     setTimeout(() => {
       modal.style.display = "none";
@@ -102,6 +105,7 @@ function ageVerification() {
     setTimeout(() => {
       header.style.display = "initial";
     }, 2500);
+    slideshow.style.display = 'initial'
   } else if (monthValue == thisMonth && dayValue == thisDay) {
     message.innerHTML = "Happy Birthday!";
     message.style.fontWeight = "800";
