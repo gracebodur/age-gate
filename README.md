@@ -31,6 +31,12 @@ Photo by <a href="https://unsplash.com/@timothyhalesbennett?utm_source=unsplash&
 
 Photo by <a href="https://unsplash.com/@cuartodeiibra?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mel Elías</a> on <a href="https://unsplash.com/s/photos/beer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
+Photo by <a href="https://unsplash.com/@jamesharris_photography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jim Harris</a> on <a href="https://unsplash.com/s/photos/brewery?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+Photo by <a href="https://unsplash.com/@reskp?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jametlene Reskp</a> on <a href="https://unsplash.com/s/photos/brewery?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+Photo by <a href="https://unsplash.com/@aquadrata?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Iwona Castiello d'Antonio</a> on <a href="https://unsplash.com/s/photos/brewery?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
 Image by <a href="https://pixabay.com/users/alles-2597842/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1465153">Alexander Lesnitsky</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1465153">Pixabay</a>
 
 Image by <a href="https://pixabay.com/users/pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1283566">Pexels</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1283566">Pixabay</a>
