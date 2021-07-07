@@ -1,6 +1,7 @@
 @import url("modal.css");
 @import url("gallery.css");
 @import url('beers.css');
+@import url('about.css');
 
 :root {
   --darkgray: #212329;

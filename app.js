@@ -15,7 +15,8 @@ const bannerBtn = document.getElementById("banner-btn");
 const errorTitle = document.getElementById("message-title");
 const errorSubtitle = document.getElementById("message-subtitle");
 const gallerySection = document.getElementById("gallery-section");
-const beerSection = document.getElementById('beers-section')
+const beerSection = document.getElementById("beers-section");
+const aboutSection = document.getElementById("about");
 
 const todaysDate = new Date();
 const thisYear = todaysDate.getFullYear();
@@ -35,6 +36,7 @@ window.addEventListener("load", () => {
   header.style.display = "none";
   gallerySection.style.display = "none";
   beerSection.style.display = "none";
+  aboutSection.style.display = 'none'
   console.log(thisMonth, thisDay, thisYear);
 });
 
@@ -90,8 +92,9 @@ function ageVerification() {
     errorSubtitle.innerHTML = `you must be ${requiredAge} or older to view this site.`;
     bannerBtn.style.display = "none";
     navbar.style.display = "none";
-    gallerySection.style.display = 'none'
+    gallerySection.style.display = "none";
     beerSection.style.display = "none";
+    aboutSection.style.display = 'none'
   } else if (userAge >= requiredAge) {
     setTimeout(() => {
       modal.style.display = "none";
@@ -99,8 +102,9 @@ function ageVerification() {
     setTimeout(() => {
       header.style.display = "initial";
     }, 2500);
-    gallerySection.style.display = 'grid'
+    gallerySection.style.display = "grid";
     beerSection.style.display = "initial";
+    aboutSection.style.display = 'flex'
   } else if (monthValue == thisMonth && dayValue == thisDay) {
     message.innerHTML = "Happy Birthday!";
     message.style.fontWeight = "800";
