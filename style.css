@@ -1,7 +1,8 @@
 @import url("modal.css");
 @import url("gallery.css");
-@import url('beers.css');
-@import url('about.css');
+@import url("beers.css");
+@import url("about.css");
+@import url("footer.css");
 
 :root {
   --darkgray: #212329;
@@ -9,9 +10,13 @@
   --lightred: #f9433dcc;
   --lightblue: #337af1;
   --lightgray: #bdbdd5;
+  --dimgray: #444;
   --white: #fff;
   --whitesmoke: #f4f4f4;
+  --ghostwhite: #bbb;
+  --cream: #ddd;
   --gold: #c29525;
+  --black: #1c1c1c;
 }
 
 * {

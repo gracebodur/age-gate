@@ -16,7 +16,7 @@ const errorTitle = document.getElementById("message-title");
 const errorSubtitle = document.getElementById("message-subtitle");
 const gallerySection = document.getElementById("gallery-section");
 const beerSection = document.getElementById("beers-section");
-const aboutSection = document.getElementById("about");
+const aboutSection = document.getElementById("about-section");
 
 const todaysDate = new Date();
 const thisYear = todaysDate.getFullYear();
