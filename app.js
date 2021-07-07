@@ -17,6 +17,7 @@ const errorSubtitle = document.getElementById("message-subtitle");
 const gallerySection = document.getElementById("gallery-section");
 const beerSection = document.getElementById("beers-section");
 const aboutSection = document.getElementById("about-section");
+const contactSection = document.getElementById("contact-section");
 
 const todaysDate = new Date();
 const thisYear = todaysDate.getFullYear();
@@ -36,7 +37,8 @@ window.addEventListener("load", () => {
   header.style.display = "none";
   gallerySection.style.display = "none";
   beerSection.style.display = "none";
-  aboutSection.style.display = 'none'
+  aboutSection.style.display = "none";
+  contactSection.style.display = "none";
   console.log(thisMonth, thisDay, thisYear);
 });
 
@@ -94,7 +96,8 @@ function ageVerification() {
     navbar.style.display = "none";
     gallerySection.style.display = "none";
     beerSection.style.display = "none";
-    aboutSection.style.display = 'none'
+    aboutSection.style.display = "none";
+    contactSection.style.display = "none";
   } else if (userAge >= requiredAge) {
     setTimeout(() => {
       modal.style.display = "none";
@@ -104,7 +107,8 @@ function ageVerification() {
     }, 2500);
     gallerySection.style.display = "grid";
     beerSection.style.display = "initial";
-    aboutSection.style.display = 'flex'
+    aboutSection.style.display = "flex";
+    contactSection.style.display = "block";
   } else if (monthValue == thisMonth && dayValue == thisDay) {
     message.innerHTML = "Happy Birthday!";
     message.style.fontWeight = "800";

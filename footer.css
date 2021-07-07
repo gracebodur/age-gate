@@ -1,3 +1,7 @@
+.footer {
+  margin-top: 5rem;
+}
+
 .main-part {
   display: flex;
   justify-content: space-between;
@@ -6,6 +10,7 @@
 }
 
 .footer-heading {
+  font-family: "Baloo Da 2", serif;
   font-size: 2.5rem;
   font-weight: 300;
   color: var(--gold);
@@ -22,12 +27,14 @@
 }
 
 .footer-list-link {
+  font-family: "Mulish", sans-serif;
   font-size: 1.4rem;
   text-decoration: none;
   color: var(--ghostwhite);
 }
 
 .contact p {
+  font-family: "Mulish", sans-serif;
   font-size: 1.5rem;
   color: var(--ghostwhite);
   margin-bottom: 4rem;
@@ -40,7 +47,7 @@
 .footer-input {
   width: 25rem;
   padding: 1rem;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Mulish", sans-serif;
   font-size: 1.8rem;
   color: var(--dimgray);
   outline: none;
@@ -51,6 +58,7 @@
   background-color: var(--gold);
   color: var(--cream);
   border: none;
+  font-family: "Mulish", sans-serif;
 }
 
 @media(max-width: 1400px) {
